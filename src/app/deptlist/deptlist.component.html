@@ -1,0 +1,50 @@
+<body>
+
+    <div class="col-md-12">
+        <button class="btn btn-primary float-left"><a routerLink="/admin">BACK </a></button>
+    </div>
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                       <div id="custom-search-input">
+                                        <div class="input-group col-md-12" style="text-align: center">
+                                            <input type="text" class="search-query form-control" placeholder="Department Id"  name="email" [(ngModel)]="deptid"/>
+                                            <span class="input-group-btn">
+                                                <button class="btn" type="button" (click)="findDeptByDid()">
+                                                    <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                            </div>
+                    </div>
+        </div>
+
+
+
+    <table class = "table">
+       
+        <thead>
+            <tr>
+                <th> Department Id</th>
+                <th> Department Name</th>
+                <th> Location</th>
+                <th> Update </th>
+                <th> Delete </th>
+    
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-info" *ngFor = "let dpt of depts" >
+                <td> {{ dpt.deptid }} </td>
+                <td> {{ dpt.deptname }} </td>
+                <td> {{ dpt.location }} </td>
+                <td><button (click) = "updateDept(dpt.deptid)" class = "btn btn-info"> Update</button></td>
+                <td><button (click) = "deleteDept(dpt.deptid)" class = "btn btn-danger" > Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    </body>

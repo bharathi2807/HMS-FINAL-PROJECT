@@ -1,0 +1,77 @@
+body{
+    background-image: url(/assets/images/slider3.jpg);
+    height: 100vh;
+    background-repeat: round;
+}
+.inner-layer{
+    height:100vh;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all .2s linear;
+}
+.form-data{
+    margin-top: 25%;
+    background-color: rgb(187, 225, 240);
+}
+.form-body{
+    padding: 20px;
+}
+.form-head{
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.form-head h2{
+    font-size: 22px;
+    font-weight:bold;
+    text-align: center;
+}
+.no-margin{
+    margin:0px ;
+}
+.form-row{
+    border-bottom: 15px;
+    padding-top: .5rem;
+}
+.form-control{
+    background-color:ghostwhite;
+}
+.form-control:focus{
+    box-shadow: none;
+    border: 3px solid skyblue;
+}
+select:focus{
+    box-shadow: none;
+    border: 3px solid skyblue;
+}
+.btn-primary{
+    background-color:rgb(65, 188, 236)!important;
+    width:410px;
+    border-color:rgb(5, 117, 161)!important;
+    margin-top: .5rem;
+}
+.content{
+  margin-top: 13%;
+  text-align: center;
+  color: white;  
+  padding: 30px;
+}
+.content h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: black;
+    text-transform: uppercase;
+    font-family:'Times New Roman', Times, serif;
+}
+.content span{
+    color:rgb(0, 183, 255);
+}
+.content h5{
+    font-size: 32px;
+    color:rgb(255, 118, 118);
+}

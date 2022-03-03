@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+    <body>
+<div class="inner-layer">
+    <div class="container">
+        <div class="col-md-6 offset-md-3">
+            <div class="login-form">
+                <form (ngSubmit) = "onSubmit()" onsubmit="window.location.reload()"  class=" border p-4">
+                    <h4 class="mb-5">Add Department Here! </h4>
+                    <div class="row">
+                        
+
+                        <div class="mb-3 col-md-12">
+                            <label>Department Name<span class="text-danger">*</span></label>
+                            <input #dname="ngModel" required minlength="3" type="text" name="dept" id="dept" class="form-control" [(ngModel)] = "department.deptname">
+                            <div *ngIf="dname.touched && dname.invalid" class="alert alert-primary" role="alert">
+                                <p *ngIf="dname.errors?.['required']">*Please fill this field.. </p>
+                                <p *ngIf="dname.errors?.['minlength']">Character should be more than 3</p>
+                            </div>
+                        </div>
+                        <div class="mb-3 col-md-12">
+                            <label>Location<span class="text-danger">*</span></label>
+                            <input #id="ngModel" required  type="text" name="loc" id="loc" class="form-control" [(ngModel)] = "department.location">
+                            <div *ngIf="id.touched && id.invalid" class="alert alert-primary">
+                                <p *ngIf="id.errors?.['required']">*Please fill this field</p>
+                               
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            
+                            <button class="btn btn-primary float-left"><a routerLink="/admin">BACK </a></button>
+                            <button class="btn btn-primary float-end" type="submit">ADD DETAIL</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

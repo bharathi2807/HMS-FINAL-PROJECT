@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+    <body>
+<div class="inner-layer">
+    <div class="container">
+        <div class="col-md-6 offset-md-3">
+            <div class="login-form">
+                <form (ngSubmit) = "onSubmit()" onsubmit="window.location.reload()" class=" border p-4">
+                    <h4 class="mb-5">Add Patient Here!</h4>
+                    <div class="row">
+                        
+
+                        <div class="mb-3 col-md-12">
+                            <label>Patient Name<span class="text-danger">*</span></label>
+                            <input #pname="ngModel" required minlength="3" type="text" name="pname" class="form-control" [(ngModel)] = "patient.pname">
+                            <div *ngIf="pname.touched && pname.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3 col-md-12">
+                            <label>DOB<span class="text-danger">*</span></label>
+                            <input #id="ngModel" required  type="date" name="dob" class="form-control" [(ngModel)] = "patient.dob">
+                            <div *ngIf="id.touched && id.invalid" class="alert alert-primary">
+                                <p *ngIf="id.errors?.['required']">*Please fill this field</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>Father Name<span class="text-danger">*</span></label>
+                            <input #des="ngModel" required  type="text" name="fatname" class="form-control" [(ngModel)] = "patient.fathername">
+                            <div *ngIf="des.touched && des.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                    
+                        <div class="mb-3 col-md-12">
+                            <label>Treatment<span class="text-danger">*</span></label>
+                            <input #drug="ngModel" required  type="text" name="treat" class="form-control" [(ngModel)] = "patient.treatment">
+                            <div *ngIf="drug.touched && drug.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>Mobile<span class="text-danger">*</span></label>
+                            <input #str="ngModel" required type="text" name="mob" class="form-control" [(ngModel)] = "patient.mobile">
+                            <div *ngIf="str.touched && str.invalid" class="alert alert-primary" role="alert">
+                                <p *ngIf="str.errors?.['required']">*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>Address<span class="text-danger">*</span></label>
+                            <input #adr="ngModel" required type="text" name="addr" class="form-control" [(ngModel)] = "patient.address">
+                            <div *ngIf="adr.touched && adr.invalid" class="alert alert-primary" role="alert">
+                                <p *ngIf="adr.errors?.['required']">*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>email<span class="text-danger">*</span></label>
+                            <input #mail="ngModel" required type="text" name="email" class="form-control" [(ngModel)] = "patient.email">
+                            <div *ngIf="mail.touched && mail.invalid" class="alert alert-primary" role="alert">
+                                <p *ngIf="mail.errors?.['required']">*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <button class="btn btn-primary float-end" type="submit">ADD PATIENT</button>
+                            <button class="btn btn-primary float-left"><a routerLink="/reception">BACK </a></button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

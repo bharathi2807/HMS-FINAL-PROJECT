@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+    <body>
+<div class="inner-layer">
+    <div class="container">
+        <div class="col-md-6 offset-md-3">
+            <div class="login-form">
+                <form (ngSubmit) = "onSubmit()" onsubmit="window.location.reload()" class=" border p-4">
+                    <h4 class="mb-5">Add Bill Here!</h4>
+                    <div class="row">
+                        
+
+                        <div class="mb-3 col-md-12">
+                            <label>Patient Id<span class="text-danger">*</span></label>
+                            <input #sname="ngModel" required type="text" name="pid" class="form-control"  [(ngModel)] = "bill.patientid">
+                            <div *ngIf="sname.touched && sname.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3 col-md-12">
+                            <label>Doctor Name<span class="text-danger">*</span></label>
+                            <input #id="ngModel" required  type="text" name="dname" class="form-control" [(ngModel)] = "bill.drname">
+                            <div *ngIf="id.touched && id.invalid" class="alert alert-primary">
+                                <p *ngIf="id.errors?.['required']">*Please fill this field</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>Drug Name<span class="text-danger">*</span></label>
+                            <input #des="ngModel" required  type="text" name="drugname" class="form-control" [(ngModel)] = "bill.drug">
+                            <div *ngIf="des.touched && des.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                    
+                        <div class="mb-3 col-md-12">
+                            <label>Amount<span class="text-danger">*</span></label>
+                            <input #drug="ngModel" required  type="text" name="amt" class="form-control" [(ngModel)] = "bill.amount">
+                            <div *ngIf="drug.touched && drug.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>Date<span class="text-danger">*</span></label>
+                            <input #str="ngModel" required type="date" name="date" class="form-control" [(ngModel)] = "bill.date">
+                            <div *ngIf="str.touched && str.invalid" class="alert alert-primary" role="alert">
+                                <p *ngIf="str.errors?.['required']">*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <button class="btn btn-primary float-left"><a routerLink="/pharmacy">BACK </a></button>
+                            <button class="btn btn-primary float-end" type="submit">ADD BILL</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

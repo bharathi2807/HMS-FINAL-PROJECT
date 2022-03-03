@@ -1,0 +1,55 @@
+<body>
+    <div class="col-md-12">
+        <button class="btn btn-primary float-left"><a routerLink="/admin">BACK </a></button>
+    </div>
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                       <div id="custom-search-input">
+                                        <div class="input-group col-md-12" style="text-align: center">
+                                            <input type="text" class="search-query form-control" placeholder="Medicine Id"  name="email" [(ngModel)]="medid"/>
+                                            <span class="input-group-btn">
+                                                <button class="btn" type="button" (click)="findMedByMid()">
+                                                    <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                            </div>
+                    </div>
+        </div>
+
+    <table class="table table-hover" >
+       
+        <thead>
+            <tr>
+                
+                <th >ID</th>
+                <th >Medicine Name</th>
+                <th> Company</th>
+                <th> Price</th>
+                <th> Expiry Date </th>
+                <th> Description </th>
+                <th> Update </th>
+                <th> Delete </th>
+    
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-info" *ngFor = "let med of medicines" >
+                <td > {{ med.medid }} </td>
+                <td > {{ med.medname }} </td>
+                <td> {{med.company}} </td>
+                <td> {{ med.price }} </td>
+                <td> {{ med.expdate }} </td>
+                <td> {{ med.description }} </td> 
+                <td><button (click) = "updateMedicine(med.medid)" class = "btn btn-info"> Update</button></td>
+                <td><button (click) = "deleteMedicine(med.medid)" class = "btn btn-danger"> Delete</button></td>
+   
+            </tr>
+        </tbody>
+    </table>
+    </body>

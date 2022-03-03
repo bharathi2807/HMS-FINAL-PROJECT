@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+    <div class="col-md-12">
+        <button class="btn btn-primary float-left"><a routerLink="/pharmacy">BACK </a></button>
+    </div>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                       <div id="custom-search-input">
+                                        <div class="input-group col-md-12" style="text-align: center">
+                                            <input type="text" class="search-query form-control" placeholder=" Patient Id"  name="email" [(ngModel)]="patientid"/>
+                                            <span class="input-group-btn">
+                                                <button class="btn" type="button" (click)="findBillByPatientid()">
+                                                    <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                            </div>
+                    </div>
+        </div>
+
+
+
+<table class="table" >
+    <thead>
+        <tr>
+            <th > BILL NO</th>
+            <th > PATIENT ID</th>
+            <th> DOCTORNAME </th>
+            <th> DRUG</th>
+            <th> AMOUNT </th>
+            <th> DATE</th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-info" *ngFor = "let st of bills " >
+            <td  class="rows"> {{ st.billno }} </td>
+            <td  class="rows"> {{ st.patientid }} </td>
+            <td  class="rows"> {{ st.drname }} </td>
+            <td  class="rows"> {{ st.drug }} </td>
+            <td  class="rows"> {{ st.amount}} </td>
+            <td  class="rows"> {{ st.date}} </td>
+            
+               
+        </tr>
+    </tbody>
+</table>
+
+
+
+</body>
+</html>

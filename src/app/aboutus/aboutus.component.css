@@ -1,0 +1,153 @@
+body{
+    overflow-x: hidden;
+    font-family: "lato",sans-serif;
+    background-color:white;
+}
+.offset:before{
+height: 3.8rem;
+margin-top: -3.8rem;
+content: "";
+display: block;
+}
+.navbar{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing:.1rem;
+    background:rgba(135,206,235,.7)!important;
+}
+.navbar-nav li{
+    padding-right:.7rem ;
+}
+.nav-item {
+    list-style: none;
+}
+#navbarResponsive ul li a{
+    color:black;
+}
+#navbarResponsive ul li a:hover{
+    color:white;
+}
+.carousel-inner{
+    background-color: black;
+}
+.carousel-item{
+    color: #fff;
+    position: relative;
+    height: 100vh;
+    background-repeat:round;
+}
+.carousel-item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: all .2s linear;
+  }
+.carousel-caption{
+    position: absolute;
+    top: 30%;
+    text-transform: uppercase;
+    right: 53%;
+}
+.carousel-caption h1{
+    color:rgba(255, 255, 255, 0.986);
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+.carousel-caption h3{
+    font-size: 2rem;
+    padding-bottom: 1.6rem;
+}
+.btn-lg{
+    border-width: medium;
+    border-radius: 0;
+    font-size: 1.1rem;
+   
+}
+.card{
+    margin: 2rem;
+}
+footer{
+    background-color:rgba(135,206,235,.7);
+    color:black;
+    padding-top: 2rem 0 3rem;
+    margin-top: 4rem;
+}
+footer img{
+    height: 4rem;
+    margin: 1.5rem 0;
+}
+footer h4{
+    font-weight: bold;
+}
+footer p{
+    font-size: 18px;
+}
+footer .fa{
+    color:blue;
+    padding-right:1.2rem;
+}
+
+hr.socket{
+border-top: .1rem solid black;
+width: 100%;
+}
+#services .card-title{
+    text-align: center;
+    color:skyblue;
+    font-size: 24px;
+}
+#services .heading{
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 1.9rem;
+    padding-top: 6rem;
+}
+#specialist .heading{
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 1.9rem;
+    padding-top: 6rem;
+}
+.heading-underline{
+width: 3rem;
+height: .2rem;
+background-color:skyblue;
+margin: 0 auto 2rem;
+}
+#specialist .card-title{
+    color:skyblue;
+}
+.container{
+    margin-top: 3rem;;
+}
+#aboutus .heading{
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 1.9rem;
+    padding-top: 6rem;
+}
+.container{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.container .fa{
+    color: skyblue;
+}
+.container .row .col strong{
+    text-align: center;
+    text-transform: uppercase;
+}
+.container .row .col p{
+    text-align: justify;
+    padding-top: 1rem;
+}

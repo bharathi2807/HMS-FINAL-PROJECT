@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                       <div id="custom-search-input">
+                                        <div class="input-group col-md-12" style="text-align: center">
+                                            <input type="text" class="search-query form-control" placeholder="Patient Id"  name="email" [(ngModel)]="patientid"/>
+                                            <span class="input-group-btn">
+                                                <button class="btn" type="button" (click)="findPrescriptionByPatientid()">
+                                                    <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                            </div>
+                    </div>
+        </div>
+
+
+
+<table class="table" >
+    <thead>
+        <tr>
+            <th > PATIENT ID</th>
+            <th > PRESCID</th>
+            <th> DOCTORNAME </th>
+            <th> DRUG</th>
+            <th> STRENGTH </th>
+            <th> DOSE </th>
+            <th> DURATION </th>
+            <th> DATE</th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-info" *ngFor = "let st of prescriptions " >
+            <td  class="rows"> {{ st.patientid }} </td>
+            <td  class="rows"> {{ st.prescid }} </td>
+            <td  class="rows"> {{ st.drname }} </td>
+            <td  class="rows"> {{ st.drug }} </td>
+            <td  class="rows"> {{ st.strength }} </td>
+            <td  class="rows"> {{ st.dose }} </td>
+            <td  class="rows"> {{ st.duration }} </td>
+            <td  class="rows"> {{ st.date}} </td>
+            
+               
+        </tr>
+    </tbody>
+</table>
+
+
+
+</body>
+</html>

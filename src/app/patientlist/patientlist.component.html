@@ -1,0 +1,58 @@
+<body>
+    <div class="col-md-12">
+        <button class="btn btn-primary float-left"><a routerLink="/reception">BACK </a></button>
+    </div>
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                       <div id="custom-search-input">
+                                        <div class="input-group col-md-12" style="text-align: center">
+                                            <input type="text" class="search-query form-control" placeholder="Patient Id"  name="email" [(ngModel)]="pid"/>
+                                            <span class="input-group-btn">
+                                                <button class="btn" type="button" (click)="findPatientByPid()">
+                                                    <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                            </div>
+                    </div>
+        </div>
+
+<table class="table" >
+    <thead>
+        <tr>
+            <th > ID</th>
+            <th > Name</th>
+            <th> DOB</th>
+            <th> Father Name</th>
+            <th> Treatment</th>
+            <th> Address </th>
+            <th> Mobile </th>
+            <th> E-mail </th>
+            <th> Update </th>
+            <th> Delete </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-info" *ngFor = "let pt of patients">
+            <td  class="rows"> {{ pt.pid }} </td>
+            <td  class="rows"> {{ pt.pname }} </td>
+            <td  class="rows"> {{ pt.dob }} </td>
+            <td  class="rows"> {{ pt.fathername }} </td>
+            <td  class="rows"> {{ pt.treatment }} </td>
+            <td  class="rows"> {{ pt.address }} </td>
+            <td  class="rows"> {{ pt.mobile }} </td>
+            <td  class="rows"> {{ pt.email }} </td>
+
+            <td><button (click) = "updatePatient(pt.pid)" class = "btn btn-info"> Update</button></td>
+            <td><button (click) = "deletePatient(pt.pid)" class = "btn btn-danger" > Delete</button></td>
+               
+        </tr>
+    </tbody>
+</table>
+</body>

@@ -1,0 +1,57 @@
+<body>
+    <div class="col-md-12">
+        <button class="btn btn-primary float-left"><a routerLink="/admin">BACK </a></button>
+    </div>
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                       <div id="custom-search-input">
+                                        <div class="input-group col-md-12" style="text-align: center">
+                                            <input type="text" class="search-query form-control" placeholder="Staff Id"  name="email" [(ngModel)]="staffid"/>
+                                            <span class="input-group-btn">
+                                                <button class="btn" type="button" (click)="findStaffBySid()">
+                                                    <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                            </div>
+                    </div>
+        </div>
+
+
+<table class="table" >
+    <thead>
+        <tr>
+            <th > ID</th>
+            <th > Staff Name</th>
+            <th> Department Id</th>
+            <th> Designation</th>
+            <th> Gender </th>
+            <th> Address </th>
+            <th> Mobile </th>
+            <th> Update </th>
+            <th> Delete </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-info" *ngFor = "let st of staffs" >
+            <td  class="rows"> {{ st.staffid }} </td>
+            <td  class="rows"> {{ st.name }} </td>
+            <td  class="rows"> {{ st.deptid }} </td>
+            <td  class="rows"> {{ st.desig }} </td>
+            <td  class="rows"> {{ st.gender }} </td>
+            <td  class="rows"> {{ st.address }} </td>
+            <td  class="rows"> {{ st.mobile }} </td>
+
+            <td><button (click) = "updateStaff(st.staffid)" class = "btn btn-info"> Update</button></td>
+            <td><button (click) = "deleteStaff(st.staffid)" class = "btn btn-danger" > Delete</button></td>
+               
+        </tr>
+    </tbody>
+</table>
+</body>
