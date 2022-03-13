@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Staff } from './staff';
+import { Appointment} from './appointment';
 
 @Injectable({
   providedIn: 'root'
@@ -35,4 +36,21 @@ export class StaffService {
   deleteStaff(staffid:number):Observable<Object>{
     return this.httpClient.delete(`${this.baseURL}/deletestaff/${staffid}`);
   }
+
+
+viewSpecialist(role:string){
+  return this.httpClient.get(`${this.baseURL}/byrole/${role}`);
+}
+
+
+//appointment add and view
+
+getAppList() :Observable<Appointment[]>{
+  return this.httpClient.get<Appointment[]>("http://localhost:8080/api/v1/viewappointment");
+}
+
+createAppointment(app:Appointment):Observable<Object>{
+  return this.httpClient.post("http://localhost:8080/api/v1/addappointment",app);
+}
+
 }

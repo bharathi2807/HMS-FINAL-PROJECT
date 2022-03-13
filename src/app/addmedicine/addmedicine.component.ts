@@ -26,7 +26,10 @@ export class AddmedicineComponent implements OnInit{
     onSubmit(){
     console.log(this.medicine);
     this.saveMedicine();
+    this.goToPatientList();
   }
-   
+  goToPatientList(){
+    this.router.navigate(['/admin']);
+  }
 
 }

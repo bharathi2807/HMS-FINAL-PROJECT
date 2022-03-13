@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<div class="inner-layer">
+    <div class="container">
+        <div class="col-md-6 offset-md-3">
+            <div class="login-form">
+                <form (ngSubmit) = "onSubmit()" onsubmit="window.location.reload()" class=" border p-4">
+                    <h4 class="mb-5">Add Login Details Here!</h4>
+                    <div class="row">
+                        
+
+                        <div class="mb-3 col-md-12">
+                            <label>User Name<span class="text-danger">*</span></label>
+                            <input #sname="ngModel" required type="text" name="pid" class="form-control"  [(ngModel)] = "login.username">
+                            <div *ngIf="sname.touched && sname.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3 col-md-12">
+                            <label>Password<span class="text-danger">*</span></label>
+                            <input #id="ngModel" required  type="text" name="dname" class="form-control" id="dname" [(ngModel)] = "login.password">
+                            <div *ngIf="id.touched && id.invalid" class="alert alert-primary">
+                                <p *ngIf="id.errors?.['required']">*Please fill this field</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>Role<span class="text-danger">*</span></label>
+                            <input #des="ngModel" required  type="text" name="drugname" class="form-control" [(ngModel)] = "login.role">
+                            <div *ngIf="des.touched && des.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                    
+                        
+
+                        <div class="col-md-12">
+                            <button class="btn btn-primary float-left"><a routerLink="/admin">BACK </a></button>
+                            <button class="btn btn-primary float-end" type="submit">ADD CREDENTIALS</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

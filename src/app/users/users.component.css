@@ -17,25 +17,28 @@ body{
 }
 .btn{
     color:whitesmoke;
-    background-color: transparent;
+    background-color: rgba(63, 190, 240, 0.7)!important;
     font-weight: bold;
     font-size: 24px;
 
 }
 .btn:hover{
-    color:black;
+    color:whitesmoke;
 }
 .icons{
     padding-top: 7rem;
    
 }
 .icons .btn{
-    background-color: transparent;
+    background-color:rgba(63, 190, 240, 0.7)!important;
     margin:.5rem;
     margin-left: 10px;
     font-weight: bold;
     font-size: 24px;
+    width:190px;
 }
+
 .icons .btn:hover{
-    color: rgb(41, 189, 248);
+  
+    color: black;
 }

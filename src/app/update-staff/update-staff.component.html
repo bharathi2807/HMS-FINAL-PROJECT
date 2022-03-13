@@ -56,7 +56,25 @@
                             <input #mob="ngModel" required minlength="10" maxlength="10" type="text" name="mobile" id="mobile" class="form-control" [(ngModel)] = "staff.mobile">
                             <div *ngIf="mob.touched && mob.invalid" class="alert alert-primary" role="alert">
                                 <p *ngIf="mob.errors?.['required']">*Please fill this field.. </p>
-                                <p *ngIf="mob.errors?.['minlength']">*Please fill the correct Number</p>
+                            </div>
+                        </div>
+
+
+                        
+   
+                        <div class="mb-3 col-md-12">
+                            <label>Role<span class="text-danger">*</span></label>
+                            <input #rol="ngModel" required  type="text" name="role" id="address" class="form-control" [(ngModel)] = "staff.role">
+                            <div *ngIf="rol.touched && rol.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>Experience<span class="text-danger">*</span></label>
+                            <input #ex="ngModel" required  type="text" name="experience" id="address" class="form-control" [(ngModel)] = "staff.experience">
+                            <div *ngIf="ex.touched && ex.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
                             </div>
                         </div>
 

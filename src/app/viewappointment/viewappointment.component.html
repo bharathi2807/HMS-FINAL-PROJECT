@@ -1,0 +1,32 @@
+<body>
+    <div class="col-md-12">
+        <button class="btn btn-primary float-left"><a routerLink="/reception">BACK </a></button>
+    </div>
+<table class="table">
+    <thead>
+        <tr>
+            <th > Patient ID </th>
+            <th > Patient Name </th>
+            <th > Visiting Date </th>
+            <th > Visiting Time </th>
+            <th > Doctor Name </th>
+            <th colspan="2">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-info" *ngFor = "let st of apps" >
+            <td  class="rows"> {{ st.pid }} </td>
+            <td  class="rows"> {{ st.pname }} </td>
+            <td  class="rows"> {{ st.date }} </td>
+            <td  class="rows"> {{ st.time }} </td>
+            <td  class="rows"> {{ st.dname }} </td>
+           
+
+            <td><button class = "btn btn-info"> Confirm</button></td>
+            <td><button  class = "btn btn-danger" >Decline</button></td>
+               
+        </tr>
+    </tbody>
+</table>
+</body>

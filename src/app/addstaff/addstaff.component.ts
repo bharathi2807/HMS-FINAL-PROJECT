@@ -24,6 +24,9 @@ export class AddstaffComponent implements OnInit{
   onSubmit(){
     console.log(this.staff);
     this.saveStaff();
+    this.goToPatientList();
   }
-
+  goToPatientList(){
+    this.router.navigate(['/admin']);
+  }
 }

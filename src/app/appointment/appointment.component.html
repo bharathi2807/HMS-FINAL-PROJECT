@@ -1,76 +1,94 @@
 <body>
-    <form >
-        <div class="inner-layer">
-            <div class="container">
-                <div class="row no-margin">
-                    <div class="col-sm-7">
+     <div class="inner-layer">
+         <div class="container">
+              <div class="row no-margin">
+                    <div class="col-sm-7" >
 
                         <div class="content">
                             <h1>Now You can Book Your Appointment Online!!!</h1>
                             <h5>Your Health Is Our Top Priority</h5>
-                            <h4>We Care For&nbsp;<span>Your Health</span>
-                        </h4>
+                            <h4>We Care For&nbsp;<span>Your Health</span></h4>
                         </div>
                     </div>
-                    <div class="col-sm-5">
-                        <div class="form-data">
+                    <div class="inner-layer1 col-sm-5">
+                        <div class="container1 form-data">
+                            
                             <div class="form-head">
                                 <h2>Book Appointment</h2>
                             </div>
-                            <div class="form-body">
+                            <div class=" form-body">
                                 <h4>Patient Details</h4>
-                                <div class="row form-row">
-                                    <input type="text" placeholder="Enter your Hospital Number" pattern="[a-z][o-9]" minlength="7" maxlength="7" class="form-control" required>
+                                <div class=" row form-row">
+                                    <form (ngSubmit) = "onSubmit()"  class=" border p-4">
+                                        <div class="row">
+                                            
+                    
+                                            <div class="row form-row">
+                                                <input #sid="ngModel" type="text" placeholder="Enter your Hospital Number" name="pid"  class="form-control" required  [(ngModel)] = "app.pid">
+                                                <div *ngIf="app.pid!=id && sid.touched" class="alert alert-primary" role="alert">
+                                                    <p>*Your ID Is Not Matching</p>
+                                                </div>
+
+                                                <input #sname="ngModel" type="text" placeholder="Enter your Full Name" name="dname" class="form-control" required [(ngModel)] = "app.pname">
+
+                                                <div *ngIf="app.pname!=name && sname.touched" class="alert alert-primary" role="alert">
+                                                    <p>*Your Name Is Not Matching</p>
+                                                </div>
+                                            </div>
+
+                                            <h4>Appointment Details</h4>
+
+                                            
+
+                                                <div class="col-sm-6">
+                                                    <label >Date Of Visiting:</label>
+                                                    <input type="date" name="vdate"  class="form-control" required [(ngModel)] = "app.date">
+                                                </div>
+                                            
+                                                <div class="col-sm-6">
+                                                                              
+                                                          <label>Time:</label><br>
+                                                          <select  name="selecttime" required [(ngModel)] = "app.time">
+                                                              <option value="Morning">Morning</option>
+                                                              <option value="Afternoon">Afternoon</option>
+                                                              <option value="Evening">Evening</option>
+                                                         </select>                                
+                                              </div>
+                    
+                                            <div class="col-sm-6" >
+                                                <label>Doctor Name:</label><br>
+                                                <select name="selectdr" required [(ngModel)] = "app.dname">
+                                                   <optgroup label="Gynacologist" >
+                                                       <option value="Dr.Lakshmi MBBS">Dr.Lakshmi MBBS.,</option>
+                                                   </optgroup>
+                                                   <optgroup label="Cardiologist">
+                                                       <option value="Dr. Martin MBBS,MD(Cardio)">Dr. Martin MBBS,MD(Cardio).,</option>
+                                                   </optgroup>
+                                                   <optgroup label="Dermotologist">
+                                                       <option value="Dr.Latha MD(Skin)">Dr.Latha MD(Skin)</option>
+                                                   </optgroup>
+                                                   <optgroup label="Opthmologist">
+                                                       <option value="Dr.Thomas MBBS,MD">Dr.Thomas MBBS,MD.,</option>
+                                                   </optgroup>
+                                                   <optgroup label="General Surgeon">
+                                                       <option value="Dr.Morries MBBS,MD(surgeon)">Dr.Morries MBBS,MD(surgeon).,</option>
+                                                   </optgroup>
+                                                   <optgroup label="Ear/Nose/Throat">
+                                                       <option value="Dr.M.Sakhundhala MBBS,MS">Dr.M.Sakhundhala MBBS,MS.,</option>
+                                                   </optgroup>
+                                                </select>
+                                            </div>
+                    
+                                            <div class="col-sm-7">
+                                                <button class="btn btn-primary" type="submit">Book Appointment</button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="row form-row">
-                                    <input type="text" placeholder="Enter your Full Name" class="form-control" required>
-                                </div>
-                                <h4>Appointment Details</h4>
-                                 <div class="row form-row">
-                                    <div class="col-sm-6">
-                                    <label for="dob">Date Of Visiting:</label>
-                                    <input type="date" id="date" class="form-control" class="form-control" required>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label>Time:</label><br>
-                                    <select id="time" class="form-control">
-                                        <option value="fn">Morning</option>
-                                        <option value="an">Afternoon</option>
-                                        <option value="pm">Evening</option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-6" >
-                                    <label>Doctor Name:</label><br>
-                                    <select required>
-                                       <optgroup label="Gynacologist" >
-                                           <option value="lakshmi">Dr.Lakshmi MBBS.,</option>
-                                       </optgroup>
-                                       <optgroup label="Cardiologist">
-                                           <option value="martin">Dr. Martin MBBS,MD(Cardio).,</option>
-                                       </optgroup>
-                                       <optgroup label="Dermotologist">
-                                           <option value="latha">Dr.Latha MD(Skin)</option>
-                                       </optgroup>
-                                       <optgroup label="Opthmologist">
-                                           <option value="thomas">Dr.Thomas MBBS,MD.,</option>
-                                       </optgroup>
-                                       <optgroup label="General Surgeon">
-                                           <option value="morris">Dr.Morries MBBS,MD(surgeon).,</option>
-                                       </optgroup>
-                                       <optgroup label="Ear/Nose/Throat">
-                                           <option value="sakhuntala">Dr.M.Sakhundhala MBBS,MS.,</option>
-                                       </optgroup>
-                                    </select>
-                                </div>
-                               <div class="col-sm-7">
-                                   <button type="submit"  class="btn btn-primary">Book Appointment</button>
-                               </div>
                             </div>
                         </div>
-                   </div>
-               </div>
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
-   </form>
-</body>
+    </body>

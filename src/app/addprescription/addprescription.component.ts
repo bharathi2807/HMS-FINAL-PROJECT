@@ -27,6 +27,9 @@ export class AddprescriptionComponent implements OnInit{
     onSubmit(){
     console.log(this.prescription);
     this.savePrescription();
+    this.goToPatientList();
   }
-
+  goToPatientList(){
+    this.router.navigate(['/doctor']);
+  }
 }

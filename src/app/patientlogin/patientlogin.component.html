@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<div class="inner-layer">
+    <div class="container">
+        <div class="col-md-6 offset-md-3">
+            <div class="login-form">
+                <form (ngSubmit) = "onSubmit()" class=" border p-4">
+                    <h4 class="mb-5">Patient Login Page! </h4>
+                    <div class="row">
+                        
+                        <div class="mb-3 col-md-12">
+                            <label>User Name<span class="text-danger">*</span></label>
+                            <input #name="ngModel" required type="text" name="Uname" class="form-control" placeholder="Enter User Name" [(ngModel)]="username">
+                            <div *ngIf="name.touched && name.invalid" class="alert alert-primary" role="alert">
+                                *Please fill this field.. 
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>Password<span class="text-danger">*</span></label>
+                            <input #pwd="ngModel" required type="password" name="password" class="form-control" placeholder="Enter Password" [(ngModel)]="password">
+                            <div *ngIf="pwd.touched && pwd.invalid" class="alert alert-primary" role="alert">
+                                *Please fill this field.. 
+                              </div>
+                        </div>
+                        <div class="errors">
+                            {{error}}
+                        </div>
+                        <div class="col-md-12">
+                            <button class="btn btn-primary float-end" type="submit">Log In</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

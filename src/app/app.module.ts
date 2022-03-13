@@ -35,6 +35,20 @@ import { FilterPipe } from './filter.pipe';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { ViewcustomprescriptionComponent } from './viewcustomprescription/viewcustomprescription.component';
 import { ViewcustombillComponent } from './viewcustombill/viewcustombill.component';
+import { PasschangeComponent } from './passchange/passchange.component';
+import { AddloginComponent } from './addlogin/addlogin.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatCardModule} from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { SignupComponent } from './signup/signup.component';
+import { ViewappointmentComponent } from './viewappointment/viewappointment.component';
+import { MatDialogModule} from '@angular/material/dialog';
+import { PopupsComponent } from './popups/popups.component';
+import { PatientloginComponent } from './patientlogin/patientlogin.component';
+import { PatientComponent } from './patient/patient.component';
+import { PatientpasschangeComponent } from './patientpasschange/patientpasschange.component';
 
 
 @NgModule({
@@ -69,13 +83,28 @@ import { ViewcustombillComponent } from './viewcustombill/viewcustombill.compone
     FilterPipe,
     AppointmentComponent,
     ViewcustomprescriptionComponent,
-    ViewcustombillComponent
+    ViewcustombillComponent,
+    PasschangeComponent,
+    AddloginComponent,
+    SignupComponent,
+    ViewappointmentComponent,
+    PopupsComponent,
+    PatientloginComponent,
+    PatientComponent,
+    PatientpasschangeComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NoopAnimationsModule,
+    FlexLayoutModule,
+    MatCardModule,
+    MatToolbarModule ,
+    MatButtonModule,
+    MatDialogModule
+
 
   ],
   providers: [StaffService],

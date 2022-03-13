@@ -28,7 +28,7 @@ body{
 .wrapper .sidebar{
   width: 200px;
   height: 100%;
-  top: 79px;
+  top: 55px;
   background:rgba(0, 99, 138,.7);
   padding: 90px 0px;
   position: fixed;
@@ -111,11 +111,12 @@ body{
   }
 }
 h1{
+  text-shadow: 3px 3px rgb(10, 1, 90);
   font-family:Lucida Handwriting;
   text-shadow: #594f8d;
-  font: size 40px;
+  font-size: 50px;
   color: white;
   position: absolute;
   top:30%;
-  left: 40%;
+  left:30%;
 }

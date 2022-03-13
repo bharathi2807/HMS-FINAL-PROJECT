@@ -25,6 +25,10 @@ bill:Bill=new Bill();
     onSubmit(){
     console.log(this.bill);
     this.saveBill();
-  }
+    this.goToPatientList();
+    }
+    goToPatientList(){
+      this.router.navigate(['/pharmacy']);
+    }
 
 }

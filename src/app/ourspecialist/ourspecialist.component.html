@@ -4,87 +4,22 @@
         <h3 class="heading">Our Specialists</h3>
         <div class="heading-underline"></div>
     </div>
-    
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <img src="/assets/images/martin.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Martin MBBS,MD(Cardio).,</h5>
-              <p class="card-text"> <b>Speciality</b> : Cardiology /Heart Specialist</p>
-              <p class="card-text"><b>Experience</b> : 10 Years</p>
-            </div>
+  </div>
+  <div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let st of staffs">
+        <div id="products_card">
+          <div class="card-body">
+            <mat-card class="mat-elevation-z4">
+              <mat-card-content>
+                <p><b class="para">Name:</b>  <span id="para1">  {{st.name}}</span></p>
+                <p><b class="para">Specialist:</b> <span id="para2">  {{st.desig}}</span></p>
+                <p><b class="para">Experience:</b>  <span id="para3">  {{st.experience}}</span></p>  
+              </mat-card-content>
+             </mat-card>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="/assets/images/sakutala.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Dr.M.Sakhundhala MBBS,MS.,</h5>
-              <p class="card-text"><b>Speciality</b>:Ear/Nose/Throat Specialist</p>
-              <p class="card-text"><b>Experience</b> : 12 Years</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="/assets/images/latha.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Dr.Latha MD(Skin)</h5>
-              <p class="card-text"><b>Speciality</b>: Dermatologist /Skin Specialist</p>
-              <p class="card-text"><b>Experience</b> : 9 Years</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="/assets/images/morris.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Dr.Morries MBBS,MD(surgeon).,</h5>
-              <p class="card-text"><b>Speciality</b>: General Surgeon Specialist</p>
-              <p class="card-text"><b>Experience</b>: 23 Years</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-              <img src="/assets/images/nihal.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Dr.Thomas MBBS,MD.,</h5>
-                <p class="card-text"> <b>Speciality</b>: Opthomologist /Eye Specialist</p>
-                <p class="card-text"><b>Experience</b> : 23 Years</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="/assets/images/lakshmi.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Dr.Lakshmi MBBS.,</h5>
-                <p class="card-text"> <b>Speciality</b> : Gynacology Specialist</p>
-              <p class="card-text"><b>Experience</b>: 25 Years</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="/assets/images/karrim.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Dr.Karim Khan MBBS.,</h5>
-                <p class="card-text"> <b>Speciality</b> :Medical Advisor</p>
-                <p class="card-text"><b>Experience</b>: 16 Years</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="/assets/images/priya.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Dr.Priya Mohan MBBS.,</h5>
-                <p class="card-text"><b>Speciality</b> : Surgery Advisor</p>
-                <p class="card-text"><b>Experience</b> : 13 Years</p>
-              </div>
-            </div>
-          </div>
+      </div>
     </div>
-</div>
+  </div>
+

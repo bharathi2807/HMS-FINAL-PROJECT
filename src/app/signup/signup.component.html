@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+     <body>
+<div class="inner-layer">
+    <div class="container">
+        <div class="col-md-6 offset-md-3">
+            <div class="login-form">
+                <form (ngSubmit) = "onSubmit()" onsubmit="window.location.reload()" class=" border p-4">
+                    <h4 class="mb-5">SignUp Here!</h4>
+                    <div class="row">
+            
+                        <div class="mb-3 col-md-12">
+                            <label>Staff Name<span class="text-danger">*</span></label>
+                            <input #sname="ngModel" required minlength="3" type="text" name="sname" id="sname" class="form-control" [(ngModel)] = "staff.name">
+                            <div *ngIf="sname.touched && sname.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3 col-md-12">
+                            <label> Department ID<span class="text-danger">*</span></label>
+                            <input #id="ngModel" required  type="text" name="deptid" id="deptid" class="form-control" [(ngModel)] = "staff.deptid">
+                            <div *ngIf="id.touched && id.invalid" class="alert alert-primary">
+                                <p *ngIf="id.errors?.['required']">*Please fill this field</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>Designation<span class="text-danger">*</span></label>
+                            <input #des="ngModel" required  type="text" name="desig" id="desig" class="form-control" [(ngModel)] = "staff.desig">
+                            <div *ngIf="des.touched && des.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>Gender<span class="text-danger">*</span></label>
+                            <input #gender="ngModel" required minlength="4" type="text" name="gender" id="gender" class="form-control" [(ngModel)] = "staff.gender">
+                            <div *ngIf="gender.touched && gender.invalid" class="alert alert-primary" role="alert">
+                                <p *ngIf="gender.errors?.['required']">*Please fill this field.. </p>
+                                <p *ngIf="gender.errors?.['minlength']">*Please fill the correct value</p>
+                            </div>
+                        </div>
+                       
+
+                        <div class="mb-3 col-md-12">
+                            <label>Address<span class="text-danger">*</span></label>
+                            <input #adr="ngModel" required  type="text" name="address" id="address" class="form-control" [(ngModel)] = "staff.address">
+                            <div *ngIf="adr.touched && adr.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>Mobile<span class="text-danger">*</span></label>
+                            <input #mob="ngModel" required minlength="10" maxlength="10" type="text" name="mobile" id="mobile" class="form-control" [(ngModel)] = "staff.mobile">
+                            <div *ngIf="mob.touched && mob.invalid" class="alert alert-primary" role="alert">
+                                <p *ngIf="mob.errors?.['required']">*Please fill this field.. </p>
+                                <p *ngIf="mob.errors?.['minlength']">*Please fill the correct Number</p>
+                            </div>
+                        </div>
+
+ 
+                        <div class="mb-3 col-md-12">
+                            <label>Role<span class="text-danger">*</span></label>
+                            <input #rol="ngModel" required  type="text" name="role" id="address" class="form-control" [(ngModel)] = "staff.role">
+                            <div *ngIf="rol.touched && rol.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>Experience<span class="text-danger">*</span></label>
+                            <input #ex="ngModel" required  type="text" name="experience" id="address" class="form-control" [(ngModel)] = "staff.experience">
+                            <div *ngIf="ex.touched && ex.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>User Name<span class="text-danger">*</span></label>
+                            <input #ex="ngModel" required  type="text" name="uname" id="address" class="form-control" [(ngModel)] = "staff.username">
+                            <div *ngIf="ex.touched && ex.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+                        <div class="mb-3 col-md-12">
+                            <label>Password<span class="text-danger">*</span></label>
+                            <input #ex="ngModel" required  type="text" name="pass" id="address" class="form-control" [(ngModel)] = "staff.password">
+                            <div *ngIf="ex.touched && ex.invalid" class="alert alert-primary" role="alert">
+                                <p>*Please fill this field.. </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <button class="btn btn-primary float-left"><a routerLink="/login">BACK </a></button>
+                            <button class="btn btn-primary float-end" type="submit">SignUp</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -28,8 +28,9 @@
 <table class="table" >
     <thead>
         <tr>
-            <th > BILL NO</th>
+            
             <th > PATIENT ID</th>
+            <th > BILL NO</th>
             <th> DOCTORNAME </th>
             <th> DRUG</th>
             <th> AMOUNT </th>
@@ -40,8 +41,9 @@
     </thead>
     <tbody>
         <tr class="table-info" *ngFor = "let st of bills " >
-            <td  class="rows"> {{ st.billno }} </td>
+            
             <td  class="rows"> {{ st.patientid }} </td>
+            <td  class="rows"> {{ st.billno }} </td>
             <td  class="rows"> {{ st.drname }} </td>
             <td  class="rows"> {{ st.drug }} </td>
             <td  class="rows"> {{ st.amount}} </td>

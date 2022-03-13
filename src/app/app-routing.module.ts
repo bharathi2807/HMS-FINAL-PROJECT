@@ -28,6 +28,14 @@ import { PatientlistComponent } from './patientlist/patientlist.component';
 import { AppointmentComponent} from './appointment/appointment.component';
 import { ViewcustomprescriptionComponent} from './viewcustomprescription/viewcustomprescription.component';
 import { ViewcustombillComponent } from './viewcustombill/viewcustombill.component';
+import { PasschangeComponent } from './passchange/passchange.component'
+import { AddloginComponent } from './addlogin/addlogin.component';
+import { SignupComponent} from './signup/signup.component';
+import { ViewappointmentComponent } from './viewappointment/viewappointment.component';
+import { PatientloginComponent } from './patientlogin/patientlogin.component';
+import { PatientComponent } from './patient/patient.component';
+import { PatientpasschangeComponent } from './patientpasschange/patientpasschange.component';
+
 const routes: Routes = [
   {path:"",component:HomeComponent},
   {path:"aboutus",component:AboutusComponent},
@@ -56,7 +64,16 @@ const routes: Routes = [
   {path: "viewpatient",component:PatientlistComponent},
   {path:"appointment",component:AppointmentComponent},
   {path:"viewprescribebypid",component:ViewcustomprescriptionComponent},
-  {path:"viewbillbypid",component:ViewcustombillComponent}
+  {path:"viewbillbypid",component:ViewcustombillComponent},
+  {path:"changepwd",component:PasschangeComponent},
+  {path:"addlogin",component:AddloginComponent},
+  {path:"signup",component:SignupComponent},
+  {path:"viewapp",component:ViewappointmentComponent},
+  {path:"patientlogin",component:PatientloginComponent},
+  {path:"patient",component:PatientComponent},
+  {path:"patientpasschange",component:PatientpasschangeComponent}
+
+
 ];
 
 @NgModule({

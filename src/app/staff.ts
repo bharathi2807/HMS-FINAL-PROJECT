@@ -6,4 +6,8 @@ export class Staff {
     gender: string;
     address: string;
     mobile: string;
+    experience:string;
+    role:string;
+    username:string;
+    password:string;
 }

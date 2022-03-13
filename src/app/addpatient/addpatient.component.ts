@@ -23,5 +23,9 @@ export class AddpatientComponent  implements OnInit{
   onSubmit(){
     console.log(this.patient);
     this.savePatient();
+    this.goToPatientList();
+  }
+  goToPatientList(){
+    this.router.navigate(['/reception']);
   }
 }

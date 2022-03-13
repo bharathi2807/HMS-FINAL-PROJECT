@@ -1,10 +1,10 @@
 body{
     background-image: url(/assets/images/slider3.jpg);
-    height: 100vh;
     background-repeat: round;
+    background-attachment: fixed;
+    height:1450px;
 }
 .inner-layer{
-    height:100vh;
     content: "";
     display: block;
     position: absolute;
@@ -12,9 +12,11 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.5);
     transition: all .2s linear;
+    height:1450px;
+    background: rgba(80, 80, 80, 0.4);
 }
+
 .form-data{
     margin-top: 25%;
     background-color: rgb(187, 225, 240);
@@ -36,7 +38,7 @@ body{
 }
 .form-row{
     border-bottom: 15px;
-    padding-top: .5rem;
+    padding-top: .1rem;
 }
 .form-control{
     background-color:ghostwhite;
@@ -51,16 +53,16 @@ select:focus{
 }
 .btn-primary{
     background-color:rgb(65, 188, 236)!important;
-    width:410px;
+    width:390px;
     border-color:rgb(5, 117, 161)!important;
     margin-top: .5rem;
 }
 .content{
-  margin-top: 13%;
-  text-align: center;
-  color: white;  
-  padding: 30px;
-}
+    margin-top: 13%;
+    text-align: center;
+    color: white;  
+    padding: 30px;
+  }
 .content h1{
     font-size: 3.5rem;
     font-weight: bold;
@@ -75,3 +77,23 @@ select:focus{
     font-size: 32px;
     color:rgb(255, 118, 118);
 }
+.alert{
+    background:rgba(135,206,235,.7);
+    color: red;
+    margin-bottom: 15px;
+    text-align: left;
+}
+p{
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+

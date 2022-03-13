@@ -23,16 +23,18 @@
         </div>
 
 
-<table class="table" >
+<table class="table">
     <thead>
         <tr>
             <th > ID</th>
-            <th > Staff Name</th>
-            <th> Department Id</th>
+            <th >  Name</th>
+            <th>  D.Id</th>
             <th> Designation</th>
             <th> Gender </th>
             <th> Address </th>
             <th> Mobile </th>
+            
+            <th> Experience</th>
             <th> Update </th>
             <th> Delete </th>
 
@@ -47,6 +49,9 @@
             <td  class="rows"> {{ st.gender }} </td>
             <td  class="rows"> {{ st.address }} </td>
             <td  class="rows"> {{ st.mobile }} </td>
+            
+            <td  class="rows"> {{ st.experience }} </td>
+           
 
             <td><button (click) = "updateStaff(st.staffid)" class = "btn btn-info"> Update</button></td>
             <td><button (click) = "deleteStaff(st.staffid)" class = "btn btn-danger" > Delete</button></td>

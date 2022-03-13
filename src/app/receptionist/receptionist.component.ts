@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-receptionist',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./receptionist.component.css']
 })
 export class ReceptionistComponent implements OnInit {
-
-  constructor() { }
+  uname:string;
+  roll:string;
+  constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
+    this.uname=sessionStorage.getItem("username");
+    this.roll=sessionStorage.getItem("role");
   }
 
 }

@@ -7,4 +7,6 @@ export class Patient {
     address:string;
     mobile:string;
     email:string;
+    username:string;
+    password:string;
 }

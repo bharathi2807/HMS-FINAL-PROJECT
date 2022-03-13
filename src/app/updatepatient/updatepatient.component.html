@@ -45,7 +45,7 @@
 
                         <div class="mb-3 col-md-12">
                             <label>Mobile<span class="text-danger">*</span></label>
-                            <input #str="ngModel" required type="text" name="mob" class="form-control" [(ngModel)] = "patient.mobile">
+                            <input #str="ngModel" required type="text" minlength="10" maxlength="10" name="mob" class="form-control" [(ngModel)] = "patient.mobile">
                             <div *ngIf="str.touched && str.invalid" class="alert alert-primary" role="alert">
                                 <p *ngIf="str.errors?.['required']">*Please fill this field.. </p>
                             </div>

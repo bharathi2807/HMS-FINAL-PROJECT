@@ -24,5 +24,9 @@ department:Department=new Department();
     onSubmit(){
     console.log(this.department);
     this.saveDepartment();
+    this.goToPatientList();
+  }
+  goToPatientList(){
+    this.router.navigate(['/admin']);
   }
 }

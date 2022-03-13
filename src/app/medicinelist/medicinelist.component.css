@@ -8,7 +8,7 @@ body{
 }
 .container{
     position: absolute;
-    top:30%;
+    top:20%;
     left:4%;
     width: 350px;
 }
@@ -40,7 +40,7 @@ table th{
 table{
     
     position:absolute;
-    top:40%;
+    top:30%;
     left:5%;
     width:90%;
     color:black;
